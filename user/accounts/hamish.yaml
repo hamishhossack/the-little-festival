@@ -1,0 +1,11 @@
+email: hamishhossack@hotmail.co.uk
+fullname: 'Hamish Hossack'
+title: Admin
+state: enabled
+access:
+  admin:
+    login: true
+    super: true
+  site:
+    login: true
+hashed_password: $2y$10$/v/yFU/6nYfrpxNWcY7eQevw0jVI/FxJWcfDkTDEiXcBd60RNzciu

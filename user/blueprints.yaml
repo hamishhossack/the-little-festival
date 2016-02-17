@@ -1,0 +1,12 @@
+name: Tlf
+version: 1.0.0
+description: "The Little Festival website."
+icon: group
+author:
+  name: Hamish Hossack
+  email: me@hamishhossack.co.uk
+  url: http://hamishhossack.co.uk
+homepage: https://github.com/hamishhossack/the-little-festival
+keywords: tlf, theme, modern, fast, responsive, html5, css3
+bugs: https://github.com/hamishhossack/the-little-festival/issues
+license: MIT

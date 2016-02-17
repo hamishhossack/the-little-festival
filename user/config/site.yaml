@@ -1,0 +1,54 @@
+title: Tlf
+author:
+  name: Hmish Hossack
+  email: 'hamishhossack@hotmail.co.uk'
+metadata:
+    description: 'TLF borsure site to include info and events'
+
+# Site settings
+title: The Little Festival
+email: thelittlefestivaluk@gmail.com
+description: "The Little Festival, underground house partys with a playful festival decorative edge."
+
+# Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
+social:
+  - label: Twitter
+    url: "#"
+    icon: twitter
+  - label: Facebook
+    url: "#"
+    icon: facebook
+  - label: Google+
+    url: "#"
+    icon: google-plus
+  - label: Github
+    url: "#"
+    icon: github
+  - label: Dribbble
+    url: "#"
+    icon: dribbble
+
+copyright:
+  line1: The Little Festival
+  line2: Design:
+  url: http://hamishhossack.co.uk
+  url_label: Hamish Hossack
+
+logo:
+  text1: "The Little Festival"
+  text2: "Underground Festival Parties"
+
+# Submenu
+submenu:
+  - text: "Events"
+    link: "#"
+  - text: "Records"
+    link: "#"
+  - text: "Info"
+    link: "#"
+  - text: "Contact"
+    link: "#"
+
+buttons:
+  - text: "Sign Up"
+    link: "#"

@@ -1,0 +1,26 @@
+{
+	"name": "grav-tlf-theme",
+	"type": "grav-tlf-theme",
+	"description": "the Little Festival website theme.",
+	"keywords": ["theme", "grav", "tlf"],
+	"homepage": "http://thelittlefestival.co.uk",
+	"license": "MIT",
+	"support": {
+		"irc": "irc://irc.freenode.org/grav"
+	},
+	"authors": [{
+		"name": "Hamish Hossack",
+		"email": "me@hamishhossack.co.uk",
+		"homepage": "http://hamishhossack.co.uk"
+	}],
+	"require": {
+		"php": ">=5.4.0",
+		"composer/installers": "~1.0"
+	},
+	"extra": {
+		"installer-name": "tlf",
+		"installer-paths": {
+			"user/themes/{$name}/": ["grav-tlf-theme"]
+		}
+	}
+}
