@@ -2,10 +2,10 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => 'themes://tlf/tlf.yaml',
-    'modified' => 1455662485,
+    'modified' => 1455746481,
     'data' => [
         'enabled' => true,
-        'color' => 'blue',
+        'color' => 'lightblue',
         'dropdown' => [
             'enabled' => false
         ],

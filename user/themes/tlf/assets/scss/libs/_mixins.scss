@@ -1,0 +1,90 @@
+/// Makes an element's :before pseudoelement a FontAwesome icon.
+/// @param {string} $content Optional content value to use.
+@mixin icon($content: false) {
+
+	text-decoration: none;
+
+	&:before {
+
+		@if $content {
+			content: $content;
+		}
+
+		-moz-osx-font-smoothing: grayscale;
+		-webkit-font-smoothing: antialiased;
+		font-family: FontAwesome;
+		font-style: normal;
+		font-weight: normal;
+		text-transform: none !important;
+
+	}
+
+}
+
+/// Applies padding to an element, taking the current element-margin value into account.
+/// @param {mixed} $tb Top/bottom padding.
+/// @param {mixed} $lr Left/right padding.
+/// @param {list} $pad Optional extra padding (in the following order top, right, bottom, left)
+/// @param {bool} $important If true, adds !important.
+@mixin padding($tb, $lr, $pad: (0,0,0,0), $important: null) {
+
+	@if $important {
+		$important: '!important';
+	}
+
+	padding: ($tb + nth($pad,1)) ($lr + nth($pad,2)) max(0.1em, $tb - _size(element-margin) + nth($pad,3)) ($lr + nth($pad,4)) #{$important};
+
+}
+
+/*
+* @include triangle within a pseudo element and add positioning properties (ie. top, left)
+* $direction: up, down, left, right
+*/
+@mixin triangle($direction, $size: 6px, $color: #222){
+  content: '';
+  display: block;
+  position: absolute;
+  height: 0; width: 0;
+  @if ($direction == 'up'){
+    border-bottom: $size solid $color;
+    border-left: 1/2*$size solid transparent;
+    border-right: 1/2*$size solid transparent;
+  }
+  @else if ($direction == 'down'){
+    border-top: $size solid $color;
+    border-left: 1/2*$size solid transparent;
+    border-right: 1/2*$size solid transparent;
+  }
+  @else if ($direction == 'left'){
+    border-top: 1/2*$size solid transparent;
+    border-bottom: 1/2*$size solid transparent;
+    border-right: $size solid $color;
+  }
+  @else if ($direction == 'right'){
+    border-top: 1/2*$size solid transparent;
+    border-bottom: 1/2*$size solid transparent;
+    border-left: $size solid $color;
+  }
+}
+
+/**
+* ClearFix
+*/
+%clearfix {
+  *zoom: 1;
+  &:after {
+    content: '';
+    display: table;
+    line-height: 0;
+    clear: both;
+  }
+}
+
+@mixin ghostVerticalAlign(){
+  &:before {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%; width: .1px;
+  }
+}
