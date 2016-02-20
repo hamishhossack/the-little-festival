@@ -1,7 +1,8 @@
 @import 'libs/vars';
 @import 'libs/functions';
 @import 'libs/mixins';
-@import url("font-awesome.min.css");
+@import 'libs/utils';
+@import url("font-awesome.css");
 @import url("http://fonts.googleapis.com/css?family=Lato:300,400,900");
 
 /*
@@ -660,50 +661,18 @@
 					display: inline-block;
 					margin-left: 1.5em;
 
-					> ul {
-						display: none;
-					}
-
-					a {
-						border: solid 1px transparent;
-						color: inherit;
-						display: inline-block;
-						line-height: 1em;
-						padding: 0.6em 0.75em;
-						text-decoration: none;
-					}
-
-					input[type="button"],
-					input[type="submit"],
-					input[type="reset"],
-					.button {
-						font-size: 1em;
-						min-width: 0;
-						width: auto;
-					}
-
-					&.submenu {
-						> a {
-							@include icon;
-
-							&:before {
-								content: '\f107';
-								margin-right: 0.65em;
-							}
-						}
+					> a {
+						color: #fff;
+						font-size: 24px;
+						font-weight: bold;
+						border: none;
+						@include ghostVerticalAlign;
 					}
 
 					&.active,
 					&:hover {
 						> a {
 							@include vendor('transition', 'all 0.2s ease-in-out');
-							background: rgba(188,202,206,0.15);
-						}
-					}
-
-					&.current {
-						> a {
-							font-weight: 900;
 						}
 					}
 				}
@@ -725,17 +694,6 @@
 			nav {
 				right: 2.5em;
 				top: 1.75em;
-
-				ul {
-					li {
-						&.active,
-						&:hover {
-							> a {
-								border: solid 1px;
-							}
-						}
-					}
-				}
 			}
 		}
 	}
@@ -1119,10 +1077,6 @@
 
 /* Narrower */
 
-	#navPanel, #navButton {
-		display: none;
-	}
-
 	@include breakpoint(narrower) {
 
 		/* Basic */
@@ -1262,100 +1216,6 @@
 				@include vendor('backface-visibility', 'hidden');
 				@include vendor('transition', 'transform #{_duration(navPanel)} ease');
 				padding-bottom: 1px;
-			}
-
-			#navButton {
-				@include vendor('backface-visibility', 'hidden');
-				@include vendor('transition', 'transform #{_duration(navPanel)} ease');
-				display: block;
-				height: 60px;
-				left: 0;
-				position: fixed;
-				top: 0;
-				width: 100%;
-				z-index: _misc(z-index-base) + 1;
-
-				.toggle {
-					@include icon;
-					height: 60px;
-					left: 0;
-					position: absolute;
-					text-align: center;
-					top: 0;
-					width: 100%;
-					border: 0;
-					outline: 0;
-
-					&:before {
-						color: _palette(navButton, fg);
-						content: '\f0c9';
-						font-size: 1em;
-						height: 40px;
-						left: 10px;
-						line-height: 40px;
-						opacity: 0.5;
-						position: absolute;
-						top: 11px;
-						width: 60px;
-						z-index: 1;
-					}
-
-					&:after {
-						background: _palette(navButton, bg);
-						border-radius: 2px;
-						content: '';
-						height: 40px;
-						left: 10px;
-						position: absolute;
-						top: 10px;
-						width: 60px;
-					}
-				}
-			}
-
-			#navPanel {
-				@include vendor('backface-visibility', 'hidden');
-				@include vendor('transform', 'translateX(#{_size(navPanel) * -1})');
-				@include vendor('transition', ('transform #{_duration(navPanel)} ease'));
-				display: block;
-				height: 100%;
-				left: 0;
-				overflow-y: auto;
-				position: fixed;
-				top: 0;
-				width: _size(navPanel);
-				z-index: _misc(z-index-base) + 2;
-				background: _palette(navPanel, bg);
-				color: _palette(navPanel, fg);
-				font-size: 0.8em;
-				letter-spacing: 0.075em;
-				text-transform: uppercase;
-				padding: 0.25em 0.75em 1em 0.75em;
-
-				.link {
-					border: 0;
-					border-top: solid 1px transparentize(_palette(navPanel, fg), 0.95);
-					color: inherit;
-					display: block;
-					height: 3em;
-					line-height: 3em;
-					opacity: 0.75;
-					text-decoration: none;
-
-					&.depth-0 {
-						font-weight: 900;
-					}
-
-					&:first-child {
-						border-top: 0;
-					}
-				}
-
-				.indent-1 { display: inline-block; width: 1em; }
-				.indent-2 { display: inline-block; width: 2em; }
-				.indent-3 { display: inline-block; width: 3em; }
-				.indent-4 { display: inline-block; width: 4em; }
-				.indent-5 { display: inline-block; width: 5em; }
 			}
 
 			body {
