@@ -19,23 +19,29 @@ class __TwigTemplate_78c7fe029fe7343d42c9acb0a6b90e8022cfe3394e174174268a8b4f268
         echo "<section id=\"banner\">
     <div class=\"inner\">
         <header>
-            <h2>";
+            <img src=\"@theme://";
         // line 4
+        echo $this->getAttribute($this->getAttribute((isset($context["page"]) ? $context["page"] : null), "header", array()), "image", array());
+        echo "\" alt=\"";
+        echo $this->getAttribute((isset($context["page"]) ? $context["page"] : null), "title", array());
+        echo "\">
+            <h2>";
+        // line 5
         echo $this->getAttribute($this->getAttribute((isset($context["page"]) ? $context["page"] : null), "header", array()), "title", array());
         echo "</h2>
         </header>
         ";
-        // line 6
+        // line 7
         echo (isset($context["content"]) ? $context["content"] : null);
         echo "
         <footer>
             <ul class=\"buttons vertical\">
                 ";
-        // line 9
+        // line 10
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable($this->getAttribute($this->getAttribute((isset($context["page"]) ? $context["page"] : null), "header", array()), "buttons", array()));
         foreach ($context['_seq'] as $context["_key"] => $context["button"]) {
-            // line 10
+            // line 11
             echo "                    <li><a href=\"";
             echo $this->getAttribute($context["button"], "url", array());
             echo "\" class=\"button fit scrolly\">";
@@ -46,11 +52,12 @@ class __TwigTemplate_78c7fe029fe7343d42c9acb0a6b90e8022cfe3394e174174268a8b4f268
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['button'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 12
+        // line 13
         echo "            </ul>
         </footer>
     </div>
-</section>";
+</section>
+";
     }
 
     public function getTemplateName()
@@ -65,12 +72,13 @@ class __TwigTemplate_78c7fe029fe7343d42c9acb0a6b90e8022cfe3394e174174268a8b4f268
 
     public function getDebugInfo()
     {
-        return array (  50 => 12,  39 => 10,  35 => 9,  29 => 6,  24 => 4,  19 => 1,);
+        return array (  56 => 13,  45 => 11,  41 => 10,  35 => 7,  30 => 5,  24 => 4,  19 => 1,);
     }
 }
 /* <section id="banner">*/
 /*     <div class="inner">*/
 /*         <header>*/
+/*             <img src="@theme://{{ page.header.image }}" alt="{{ page.title }}">*/
 /*             <h2>{{ page.header.title }}</h2>*/
 /*         </header>*/
 /*         {{ content }}*/
@@ -83,3 +91,4 @@ class __TwigTemplate_78c7fe029fe7343d42c9acb0a6b90e8022cfe3394e174174268a8b4f268
 /*         </footer>*/
 /*     </div>*/
 /* </section>*/
+/* */

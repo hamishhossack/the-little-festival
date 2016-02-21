@@ -2,7 +2,7 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => '/Users/hamishhossack/Sites/tlf/user/config/site.yaml',
-    'modified' => 1455745784,
+    'modified' => 1456068493,
     'data' => [
         'title' => 'Tlf',
         'author' => [
@@ -29,16 +29,6 @@ return [
                 'label' => 'Google+',
                 'url' => '#',
                 'icon' => 'google-plus'
-            ],
-            3 => [
-                'label' => 'Github',
-                'url' => '#',
-                'icon' => 'github'
-            ],
-            4 => [
-                'label' => 'Dribbble',
-                'url' => '#',
-                'icon' => 'dribbble'
             ]
         ],
         'copyright' => [

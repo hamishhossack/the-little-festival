@@ -49,6 +49,18 @@
 			offset: -10
 		});
 
+		// Navigation Panel
+		$('#navPanel').panel({
+			delay: 500,
+			hideOnClick: true,
+			hideOnSwipe: true,
+			resetScroll: true,
+			resetForms: true,
+			side: 'left',
+			target: $body,
+			visibleClass: 'navPanel-visible'
+		});
+
 		// Header.
 		// If the header is using "alt" styling and #banner is present, use scrollwatch
 		// to revert it back to normal styling once the user scrolls past the banner.
