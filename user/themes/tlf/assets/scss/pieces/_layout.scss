@@ -1,0 +1,157 @@
+
+
+/* Section/Article */
+
+	section, article {
+		&.special {
+			text-align: center;
+		}
+	}
+
+	header {
+		&.major {
+			padding-bottom: 2em;
+		}
+
+		&.special {
+			margin-bottom: 5em;
+			padding-top: 7em;
+			position: relative;
+			text-align: center;
+
+			&:before,
+			&:after {
+				border-bottom: solid 1.5px;
+				border-top: solid 1.5px;
+				content: '';
+				height: 7px;
+				opacity: 0.1;
+				position: absolute;
+				top: 1.75em;
+				width: 43%;
+			}
+
+			&:before {
+				left: 0;
+			}
+
+			&:after {
+				right: 0;
+			}
+
+			h2 {
+				margin-bottom: 0;
+			}
+
+			h2 + p {
+				margin-bottom: 0;
+				padding-top: 1.5em;
+			}
+
+			.icon {
+				cursor: default;
+				height: 7em;
+				left: 0;
+				position: absolute;
+				text-align: center;
+				top: 1em;
+				width: 100%;
+
+				&:before {
+					font-size: 3.5em;
+					opacity: 0.35;
+				}
+			}
+		}
+	}
+
+	footer {
+		> :last-child {
+			margin-bottom: 0;
+		}
+
+		&.major {
+			padding-top: 3em;
+		}
+	}
+
+/* Main */
+
+	#main {
+		background-image: url('images/dark-tl.svg'), url('images/dark-tr.svg'), url('images/dark-bl.svg'), url('images/dark-br.svg');
+		background-position: top left, top right, bottom left, bottom right;
+		background-repeat: no-repeat;
+		background-size: $pattern-background-size;
+		padding: 7em 0;
+
+		> :last-child {
+			margin-bottom: 0;
+		}
+
+		.sidebar {
+			section {
+				border-top: solid 1px _palette(border);
+				margin: 3em 0 0 0;
+				padding: 3em 0 0 0;
+
+				&:first-child {
+					border-top: 0;
+					padding-top: 0;
+					margin-top: 0;
+				}
+			}
+		}
+	}
+
+	body.index #main {
+		padding-top: 5em;
+	}
+
+
+/* Wrapper */
+
+	.wrapper {
+		margin-bottom: 5em;
+		padding: 5em;
+
+		&.style1 {
+			padding: 0;
+		}
+
+		&.style2 {
+			background-color: _palette(one, bg);
+			background-image: url('images/light-bl.svg'), url('images/light-br.svg');
+			background-position: bottom left, bottom right;
+			background-repeat: no-repeat, no-repeat;
+			background-size: $pattern-background-size, $pattern-background-size;
+			color: _palette(one, fg);
+
+			.button {
+				&:hover {
+					background: rgba(255,255,255,0.15) !important;
+				}
+
+				&.special {
+					background: _palette(one, fg);
+					border-color: _palette(one, fg);
+					color: _palette(one, bg) !important;
+
+					&:hover {
+						border-color: inherit !important;
+						color: _palette(one, fg) !important;
+					}
+				}
+			}
+		}
+
+		&.style3 {
+			background: _palette(two, bg);
+			color: _palette(two, fg);
+		}
+
+		&.style4 {
+			background: _palette(two, bg);
+			color: _palette(two, fg);
+			padding: 4em;
+		}
+	}

@@ -1,10 +1,43 @@
 <header id="header" class="{{ page.header.header_class }}">
-  <h1 id="logo"><a href="{{ base_url_absolute }}">{{ site.logo.text1 }} <span>{{ site.logo.text2 }}</span></a></h1>
-  <nav id="nav">
-    <ul>
-      <li class="main-navigation-toggle">
-        <a href=""><div class="hexagon"><div class="inner"><i class="fa fa-bars"></i></div></div></a>
-      </li>
-    </ul>
-  </nav>
+    <h1 id="logo"><a href="{{ base_url_absolute }}">{{ site.logo.text1 }} <span>{{ site.logo.text2 }}</span></a></h1>
+    <a href="#" class="menuToggle">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Hexagon" x="0px" y="0px" width="50px" height="56px" viewBox="0 0 48 54" xml:space="preserve" enable-background="new 0 0 48 54">
+            <style type="text/css">
+                .hexagon {
+                    fill: white;
+                }
+            </style>
+            <path class="hexagon" d="M48 13.2v27.9L24 54 0 41.1V13.2C6 10.7 23.9 0 23.9 0L48 13.2z"></path>
+        </svg>
+    <i class="fa fa-bars"></i>
+    </a>
+    <div id="navPanel">
+        <nav id="nav">
+            <ul>
+                {% for page in pages.children %}
+                    {% if page.visible %}
+                        {% set current_page = (page.active or page.activeChild) ? 'current' : '' %}
+                        <li class="{{ current_page }}">
+                            <a href="{{ page.url }}">
+                                {{ page.menu }}
+                            </a>
+                        </li>
+                    {% endif %}
+                {% endfor %}
+                {% for mitem in site.menu %}
+                    <li>
+                        <a href="{{ mitem.link }}">{{ mitem.text }}</a>
+                    </li>
+                {% endfor %}
+                <li class="submenu">
+                    <a href="">Submenu</a>
+                    <ul>
+                        {% for submenu in site.submenu %}
+                            <li><a href="{{ submenu.link }}">{{ submenu.text }}</a></li>
+                        {% endfor %}
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
 </header>

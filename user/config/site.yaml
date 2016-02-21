@@ -21,12 +21,6 @@ social:
   - label: Google+
     url: "#"
     icon: google-plus
-  - label: Github
-    url: "#"
-    icon: github
-  - label: Dribbble
-    url: "#"
-    icon: dribbble
 
 copyright:
   line1: The Little Festival
