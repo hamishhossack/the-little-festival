@@ -1,10 +1,36 @@
 <header id="header" class="{{ page.header.header_class }}">
-  <h1 id="logo"><a href="{{ base_url_absolute }}">{{ site.logo.text1 }} <span>{{ site.logo.text2 }}</span></a></h1>
-  <nav id="nav">
-    <ul>
-      <li class="main-navigation-toggle">
-        <a href=""><div class="hexagon"><div class="inner"><i class="fa fa-bars"></i></div></div></a>
-      </li>
-    </ul>
-  </nav>
+    <h1 id="logo"><a href="{{ base_url_absolute }}">{{ site.logo.text1 }} <span>{{ site.logo.text2 }}</span></a></h1>
+    <a href="#" class="main-menu-panel-toggle"><div class="hexagon"><div class="inner"><i class="fa fa-bars"></i></div></div></a>
+    <div id="main-menu-panel">
+        <a href="#" class="main-menu-panel-toggle"><div class="hexagon alt"><div class="inner"><i class="fa fa-arrow-left"></i></div></div></a>
+        <div class="container">
+            <div class="row">
+                <div class="4u 12u(narrower)">
+                </div>
+                <div class="4u 12u(narrower)">
+                    <nav id="nav">
+                        <ul>
+                            {% for page in pages.children %}
+                                {% if page.visible %}
+                                    {% set current_page = (page.active or page.activeChild) ? 'current' : '' %}
+                                    <li class="{{ current_page }}">
+                                    <a href="{{ page.url }}">
+                                      {{ page.menu }}
+                                    </a>
+                                    </li>
+                                {% endif %}
+                            {% endfor %}
+                            {% for mitem in site.menu %}
+                                <li>
+                                <a href="{{ mitem.link }}">{{ mitem.text }}</a>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </nav>
+                </div>
+                <div class="4u 12u(narrower)">
+                </div>
+            </div>
+        </div>
+    </div>
 </header>

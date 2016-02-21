@@ -193,7 +193,7 @@ class __TwigTemplate_925450d963fadf20a48c5a7b1b32ff2253fa4f46bf78416550d16a436e3
         $this->getAttribute((isset($context["assets"]) ? $context["assets"] : null), "addJs", array(0 => "theme://assets/js/jquery.scrollgress.min.js"), "method");
         // line 48
         echo "            ";
-        $this->getAttribute((isset($context["assets"]) ? $context["assets"] : null), "addJs", array(0 => "theme://assets/js/jquery.panels.min.js"), "method");
+        $this->getAttribute((isset($context["assets"]) ? $context["assets"] : null), "addJs", array(0 => "theme://assets/js/panels.min.js"), "method");
         // line 49
         echo "            ";
         $this->getAttribute((isset($context["assets"]) ? $context["assets"] : null), "addJs", array(0 => "theme://assets/js/skel.min.js"), "method");
@@ -278,7 +278,7 @@ class __TwigTemplate_925450d963fadf20a48c5a7b1b32ff2253fa4f46bf78416550d16a436e3
 /*             {% do assets.add('jquery',101) %}*/
 /*             {% do assets.addJs('theme://assets/js/jquery.scrolly.min.js') %}*/
 /*             {% do assets.addJs('theme://assets/js/jquery.scrollgress.min.js') %}*/
-/*             {% do assets.addJs('theme://assets/js/jquery.panels.min.js') %}*/
+/*             {% do assets.addJs('theme://assets/js/panels.min.js') %}*/
 /*             {% do assets.addJs('theme://assets/js/skel.min.js') %}*/
 /*             {% do assets.addJs('theme://assets/js/util.js') %}*/
 /*             {% if browser.getBrowser == 'msie' and browser.getVersion == 8 %}*/

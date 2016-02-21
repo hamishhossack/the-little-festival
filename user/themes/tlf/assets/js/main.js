@@ -73,6 +73,25 @@
 
 		}
 
+		// Panels Config
+		var $panels = $('.scotch-panel'),
+			cleanPanels = function () {
+				// Reset all panels
+				$panels.css('z-index', 0);
+			};
+
+		// Main Menu Panel
+		var $mainMenuPanel = $('#main-menu-panel');
+		$mainMenuPanel.scotchPanel({
+			direction: 'left',
+			distanceX: '100%',
+			clickSelector: '.main-menu-panel-toggle',
+			beforePanelOpen: function () {
+				cleanPanels();
+				$mainMenuPanel.css('z-index', 11);
+			}
+		});
+
 	});
 
 })(jQuery);
