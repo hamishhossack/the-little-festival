@@ -28,41 +28,47 @@
 			}
 		}
 
-		a.menuToggle {
+		a.main-menu-toggle {
 			border: 0;
 			position: absolute;
 			right: 0.9rem;
 			top: 0.9rem;
-			pointer: cursor;
-			i {
-				pointer: inherit;
+			z-index: 2000;
+
+			svg {
 				position: absolute;
-				padding: 0.8rem 0.7rem;
-				top: 0;
-				font-size: 2rem;
 			}
 		}
 
+		#navPanel {
+			color: #fff;
+		    min-height: 100%;
+			min-width: 100%;
+			background: _palette('main');
+		}
+
 		nav {
-			text-transform: uppercase;
-		    position: fixed;
-		    width: 100%;
-		    height: 100%;
-		    left: 0;
-		    top: 0;
-		    background: _palette('main');
 		    z-index: 10;
+			text-transform: uppercase;
 
 			ul {
 				li {
 					display: inline-block;
 					margin-left: 1.5em;
+					width: 100%;
 
 					> a {
 						color: #fff;
-						font-size: 24px;
-						font-weight: bold;
 						border: none;
+						h3 {
+							font-size: 4rem;
+							line-height: 4rem;
+							font-weight: bold;
+							margin: 0;
+						}
+						p {
+							margin: 0;
+						}
 					}
 
 					&.active,
