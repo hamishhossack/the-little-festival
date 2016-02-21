@@ -1,6 +1,6 @@
 ---
-title: Right Sidebar
-subtitle: "Behold the <strong>Right Sidebar</strong>"
+title: Records
+subtitle: "Music, DJ's and sounds"
 description: "Where things on the right ... accompany that on the left."
 body_class: right-sidebar
 header_class: skel-layers-fixed

@@ -49,16 +49,20 @@
 			offset: -10
 		});
 
-		// Navigation Panel
-		$('#navPanel').panel({
-			delay: 500,
-			hideOnClick: true,
-			hideOnSwipe: true,
-			resetScroll: true,
-			resetForms: true,
-			side: 'left',
-			target: $body,
-			visibleClass: 'navPanel-visible'
+		// Off-Canvas Navigation.
+		// Navigation Panel.
+		var $menuTrigger = $(".main-menu-toggle");
+		$("#navPanel").slideReveal({
+			trigger: $menuTrigger,
+			width: '100%',
+			push: false,
+			overlay: true,
+			show: function (slider, trigger) {
+				$menuTrigger.addClass('is-active');
+			},
+			hide: function (slider, trigger) {
+				$menuTrigger.removeClass('is-active');
+			}
 		});
 
 		// Header.

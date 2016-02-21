@@ -33,15 +33,9 @@ logo:
   text2: "Underground Festival Parties"
 
 # Submenu
-submenu:
-  - text: "Events"
-    link: "#"
-  - text: "Records"
-    link: "#"
-  - text: "Info"
-    link: "#"
-  - text: "Contact"
-    link: "#"
+#submenu:
+#  - text: "Events"
+#    link: "#"
 
 buttons:
   - text: "Sign Up"

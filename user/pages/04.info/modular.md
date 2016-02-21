@@ -1,6 +1,6 @@
 ---
-title: No Sidebar
-subtitle: "And finally there's <strong>No Sidebar</strong>"
+title: Info
+subtitle: "About our team and style"
 description: "Where that in the center faces the nameless horrors alone."
 body_class: no-sidebar
 header_class: skel-layers-fixed
