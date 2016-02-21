@@ -1,5 +1,6 @@
 ---
 title: The Little Festival
+subtitle: Underground Festivals
 menu: Home
 onpage_menu: true
 body_class: index

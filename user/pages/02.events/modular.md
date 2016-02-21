@@ -1,6 +1,6 @@
 ---
-title: Left Sidebar
-subtitle: "Behold the <strong>Left Sidebar</strong>"
+title: Events
+subtitle: "Check out our events"
 description: "Where things on the left ... accompany that on the right."
 body_class: left-sidebar
 header_class: skel-layers-fixed

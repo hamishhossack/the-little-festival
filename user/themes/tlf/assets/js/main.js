@@ -85,7 +85,8 @@
 		$mainMenuPanel.scotchPanel({
 			direction: 'left',
 			distanceX: '100%',
-			clickSelector: '.main-menu-panel-toggle',
+			clickSelector: '.main-menu-panel-open, .main-menu-panel-close',
+			enableEscapeKey: true,
 			beforePanelOpen: function () {
 				cleanPanels();
 				$mainMenuPanel.css('z-index', 11);
