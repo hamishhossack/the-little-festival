@@ -7,8 +7,10 @@
         {{ content }}
         <footer>
             <ul class="buttons vertical">
-                {% for button in page.header.buttons %}
-                    <li><a href="{{ button.url }}" class="button fit scrolly">{{ button.text }}</a></li>
+                {% for post in page.find('/events').children.order('date', 'desc').slice(0, 5) %}
+                    <li class="recent-posts">
+                        <strong><a href="{{ post.url }}" class="button fit">{{ post.title }}</a></strong>
+                    </li>
                 {% endfor %}
             </ul>
         </footer>

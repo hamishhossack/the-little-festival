@@ -5,6 +5,9 @@ buttons:
   - text: Tell me more
     url: /events
 menu: before_article
+twig_first: true
+process:
+  twig: true
 ---
 
 <p>This is <strong>Twenty</strong>, a free

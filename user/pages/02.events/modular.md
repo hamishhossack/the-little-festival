@@ -7,10 +7,10 @@ header_class: skel-layers-fixed
 icon: laptop
 onpage_menu: true
 content:
-    items: @self.modular
+    items: @self.children
     order:
-        by: default
-        dir: asc
-        custom:
-            - _content
+        by: date
+        dir: desc
+    limit: 14
+    pagination: true
 ---
