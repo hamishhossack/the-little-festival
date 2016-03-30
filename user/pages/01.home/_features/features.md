@@ -1,12 +1,13 @@
 ---
 features:
-    - icon: check
-      title: This is Something
-      text: Sed tristique purus vitae volutpat ultrices. Aliquam eu elit eget arcu commodo suscipit dolor nec nibh. Proin a ullamcorper elit, et sagittis turpis. Integer ut fermentum.
-    - icon: check
-      title: Also Something
-      text: Sed tristique purus vitae volutpat ultrices. Aliquam eu elit eget arcu commodo suscipit dolor nec nibh. Proin a ullamcorper elit, et sagittis turpis. Integer ut fermentum.  
-    - icon: check
-      title: Probably Something
-      text: Sed tristique purus vitae volutpat ultrices. Aliquam eu elit eget arcu commodo suscipit dolor nec nibh. Proin a ullamcorper elit, et sagittis turpis. Integer ut fermentum.    
+  - icon: group
+    title: Our Team
+    text: 'A team with an ambition to create friendly, fun and exciting environments to enjoy our selection of sounds.'
+  - icon: map-pin
+    title: Innovative Venues
+    text: Events across London in all different types of venues to maximize a healthy balance of lifestyle and parties.
+  - icon: magic
+    title: Visually Beautiful
+    text: Presenting multiple rooms with different themes maxed out by using the latest visual enhancements.
 ---
+

@@ -1,5 +1,5 @@
 <section id="banner">
-    <div class="inner">
+    <div class="inner 5u">
         <header>
             <img src="/user/themes/tlf/{{ page.header.image }}" alt="{{ page.title }}">
             <h2>{{ page.header.title }}</h2>
@@ -7,9 +7,9 @@
         {{ content }}
         <footer>
             <ul class="buttons vertical">
-                {% for post in page.find('/events').children.order('date', 'desc').slice(0, 5) %}
+                {% for button in page.header.buttons %}
                     <li class="recent-posts">
-                        <strong><a href="{{ post.url }}" class="button fit">{{ post.title }}</a></strong>
+                        <strong><a href="{{ button.url }}" class="button fit">{{ button.text }}</a></strong>
                     </li>
                 {% endfor %}
             </ul>

@@ -62,7 +62,7 @@ pages:
   ignore_hidden: true
   url_taxonomy_filters: true
 cache:
-  enabled: true
+  enabled: false
   check:
     method: file
   driver: auto
@@ -79,11 +79,11 @@ twig:
   umask_fix: false
 assets:
   css_pipeline: false
-  css_minify: true
+  css_minify: false
   css_minify_windows: false
-  css_rewrite: true
+  css_rewrite: false
   js_pipeline: false
-  js_minify: true
+  js_minify: false
   enable_asset_timestamp: false
   collections:
     jquery: 'system://assets/jquery/jquery-2.x.min.js'
